@@ -10,6 +10,7 @@
       <list>
         <option value="$PROJECT_DIR$/mvc/pom.xml" />
         <option value="$PROJECT_DIR$/injections/pom.xml" />
+        <option value="$PROJECT_DIR$/hibernate/pom.xml" />
       </list>
     </option>
   </component>
