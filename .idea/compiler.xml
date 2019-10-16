@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mvc" />
         <module name="hibernate" />
+        <module name="connection" />
         <module name="injections" />
         <module name="spring-new" />
       </profile>
