@@ -2,7 +2,24 @@
 <module type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="web mvc-dispatcher servlet context" name="MVC mvc-dispatcher servlet context" removed="true">
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/beansHibernate.xml</file>
+        </fileset>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/beans.xml</file>
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/beansHibernate.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map>
+          <unit-entry name="sessionFactory" value="5b4ddcae-1345-44d6-95ea-c8104badaf84" />
+        </datasource-map>
+        <naming-strategy-map />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/beansHibernate.xml" />
+      </configuration>
     </facet>
   </component>
 </module>

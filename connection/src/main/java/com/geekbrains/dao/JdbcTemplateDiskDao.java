@@ -4,7 +4,6 @@ import com.geekbrains.entities.Disk;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-
 import javax.sql.DataSource;
 
 @Component
@@ -22,9 +21,10 @@ public class JdbcTemplateDiskDao implements DiskDao {
             // update
             String sql = "UPDATE disks SET title = ? WHERE id = ?;";
             jdbcTemplate.update(sql, disk.getTitle(), disk.getId());
-        } else {
+        }
+        else {
             // insert
-            String sql = "INSERT INTO disks (title) VALUES (?)";
+            String sql = "INSERT INTO disks (title) VALUES (?);";
             jdbcTemplate.update(sql, disk.getTitle());
         }
     }
