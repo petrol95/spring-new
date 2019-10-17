@@ -14,6 +14,9 @@ public class DiskHib {
     @Column(name = "title")
     private String title;
 
+    @Column(name = "produced_year")
+    private int producedYear;
+
     public Long getId() {
         return id;
     }
@@ -30,11 +33,19 @@ public class DiskHib {
         this.title = title;
     }
 
+    public int getProducedYear() {
+        return producedYear;
+    }
+
+    public void setProducedYear(int producedYear) {
+        this.producedYear = producedYear;
+    }
+
     public DiskHib() {
     }
 
     @Override
     public String toString() {
-        return "DiskHib id=" + id + " title=" + title;
+        return "DiskHib id=" + id + " title=" + title + " produced_year:" + producedYear;
     }
 }

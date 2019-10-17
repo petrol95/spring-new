@@ -9,13 +9,14 @@
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/beans.xml</file>
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/beansHibernate.xml</file>
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/view/beansSpringData.xml</file>
         </fileset>
       </configuration>
     </facet>
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="sessionFactory" value="5b4ddcae-1345-44d6-95ea-c8104badaf84" />
+          <unit-entry name="sessionFactory" value="b9ee88c8-7302-4d28-ab09-73852c76c8cf" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/beansHibernate.xml" />
