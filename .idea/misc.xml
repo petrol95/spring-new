@@ -3,8 +3,9 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/../mvcn/mvc" />
-    <file type="web" url="file://$PROJECT_DIR$/connection" />
+    <file type="web" url="file://$PROJECT_DIR$/connections" />
     <file type="web" url="file://$PROJECT_DIR$/mvc" />
+    <file type="web" url="file://$PROJECT_DIR$/studentcourses" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -13,6 +14,7 @@
         <option value="$PROJECT_DIR$/injections/pom.xml" />
         <option value="$PROJECT_DIR$/hibernate/pom.xml" />
         <option value="$PROJECT_DIR$/connection/pom.xml" />
+        <option value="$PROJECT_DIR$/studentcourses/pom.xml" />
       </list>
     </option>
   </component>
