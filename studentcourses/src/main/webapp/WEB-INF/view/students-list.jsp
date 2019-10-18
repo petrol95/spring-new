@@ -14,12 +14,12 @@
     <table border="1">
         <th>Id</th>
         <th>Name</th>
-
+        <th><a href="/students/list/order">Order</a></th>
         <c:forEach var="student" items="${studentsList}">
             <tr>
                 <td>${student.id}</td>
-                <td>${student.name}</td>
-
+                <td><a href="/students/${student.id}">${student.name}</a></td>
+                <td><c:forEach var="course" items="${student.courses}"><a href="/courses/${course.id}">${course.title}</a> </c:forEach></td>
             </tr>
         </c:forEach>
     </table>

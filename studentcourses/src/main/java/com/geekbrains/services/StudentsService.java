@@ -1,5 +1,6 @@
 package com.geekbrains.services;
 
+import com.geekbrains.entities.Course;
 import com.geekbrains.entities.Student;
 import com.geekbrains.repositories.StudentsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +22,13 @@ public class StudentsService {
 
     public List<Student> getAllStudentsList() {
         return (List<Student>) studentsRepository.findAll();
+    }
+
+    public Student getOneById(Long id) {
+        return studentsRepository.findOneById(id);
+    }
+
+    public List<Student> getAllStudentsOrderByCoursesNumber() {
+        return studentsRepository.findAllOrderByCoursesNumber();
     }
 }
