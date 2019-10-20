@@ -15,7 +15,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="connections" target="1.7" />
       <module name="spring" target="1.5" />
     </bytecodeTargetLevel>
   </component>

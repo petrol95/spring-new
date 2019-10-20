@@ -6,10 +6,10 @@
         <fileset id="web mvc-dispatcher servlet context" name="MVC mvc-dispatcher servlet context" removed="true">
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/beansHibernate.xml</file>
         </fileset>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
+        <fileset id="fileset3" name="Spring Application Context (3)" removed="false">
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/beans.xml</file>
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/beansHibernate.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/view/beansSpringData.xml</file>
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/beansSpringData.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -19,16 +19,16 @@
           <unit-entry name="sessionFactory" value="b9ee88c8-7302-4d28-ab09-73852c76c8cf" />
         </datasource-map>
         <naming-strategy-map />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/../connections/src/main/webapp/WEB-INF/beansHibernate.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/beansHibernate.xml" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
-    <output url="file://$MODULE_DIR$/../connections/target/classes" />
+    <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
-    <content url="file://$MODULE_DIR$/../connections">
-      <sourceFolder url="file://$MODULE_DIR$/../connections/src/main/java" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/../connections/target" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

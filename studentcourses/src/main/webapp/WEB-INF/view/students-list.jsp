@@ -14,7 +14,7 @@
     <table border="1">
         <th>Id</th>
         <th>Name</th>
-        <th><a href="/students/list/order">Order</a></th>
+        <th><a href="/students/list/order/page/0">Order</a></th>
         <c:forEach var="student" items="${studentsList}">
             <tr>
                 <td>${student.id}</td>
@@ -22,6 +22,9 @@
                 <td><c:forEach var="course" items="${student.courses}"><a href="/courses/${course.id}">${course.title}</a> </c:forEach></td>
             </tr>
         </c:forEach>
+        <tr>
+            <td colspan="3">${totalPages}</td>
+        </tr>
     </table>
     <br>
     <a href="/">Back To Main Page</a>

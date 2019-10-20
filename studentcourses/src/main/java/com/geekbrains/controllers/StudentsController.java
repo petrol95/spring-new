@@ -1,9 +1,10 @@
 package com.geekbrains.controllers;
 
-import com.geekbrains.entities.Course;
 import com.geekbrains.entities.Student;
 import com.geekbrains.services.StudentsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -43,6 +44,16 @@ public class StudentsController {
     public String showStudentsListOrderByCoursesNumber(Model model) {
         List<Student> allStudents = studentsService.getAllStudentsOrderByCoursesNumber();
         model.addAttribute("studentsList", allStudents);
+        return "students-list";
+    }
+
+    @RequestMapping("/list/order/page/{sid}")
+    public String showStudentsListOrderByCoursesNumber(@PathVariable("sid") int pageId, Model model) {
+        Page<Student> page = studentsService.getAllStudentsOrderByCoursesNumber(PageRequest.of(pageId, 2));
+        List<Student> pageStudents = page.getContent();
+        int totalPages = page.getTotalPages();
+        model.addAttribute("studentsList", pageStudents);
+        model.addAttribute("totalPages", totalPages);
         return "students-list";
     }
 }
