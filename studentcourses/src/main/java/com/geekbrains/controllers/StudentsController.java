@@ -30,6 +30,10 @@ public class StudentsController {
     public String showStudentsList(Model model) {
         List<Student> allStudents = studentsService.getAllStudentsList();
         model.addAttribute("studentsList", allStudents);
+        model.addAttribute("totalPages", 1);
+        model.addAttribute("number", 0);
+        model.addAttribute("prev", 0);
+        model.addAttribute("next", 0);
         return "students-list";
     }
 
@@ -52,8 +56,14 @@ public class StudentsController {
         Page<Student> page = studentsService.getAllStudentsOrderByCoursesNumber(PageRequest.of(pageId, 2));
         List<Student> pageStudents = page.getContent();
         int totalPages = page.getTotalPages();
+        int number = page.getNumber();
+        int prev = (number == 0) ? 0 : (number - 1);
+        int next = (number == totalPages - 1) ? (totalPages - 1) : (number + 1);
         model.addAttribute("studentsList", pageStudents);
         model.addAttribute("totalPages", totalPages);
+        model.addAttribute("number", number);
+        model.addAttribute("prev", prev);
+        model.addAttribute("next", next);
         return "students-list";
     }
 }

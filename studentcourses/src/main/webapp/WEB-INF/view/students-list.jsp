@@ -23,7 +23,7 @@
             </tr>
         </c:forEach>
         <tr>
-            <td colspan="3">${totalPages}</td>
+            <td colspan="3" align="center"> <a href="/students/list/order/page/${prev}"><<</a> Page ${number + 1} of ${totalPages} <a href="/students/list/order/page/${next}">>></a></td>
         </tr>
     </table>
     <br>
