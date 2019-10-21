@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Students List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.3.1/dist/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/main.js}"></script>
+    <link type="text/css" rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/resources/css/main.css}"/>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <h1>Students List</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Info</th>
+                <th scope="col">Action</th>
+                <th scope="col">Check Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--/*@thymesVar id="studentsList" type="java.util.List<com.geekbrains.entities.Student>"*/-->
+            <tr th:each="student : ${studentsList}">
+                <td th:text="${student.id}"/>
+                <td>
+                    <a th:href="'/students/' + ${student.id}" th:text="${student.name}"></a>
+                </td>
+                <td th:text="${student.name.length()}"/>
+                <td>
+                    <button class="btn btn-primary removeBtn" th:attr="entryIndex = ${student.id}">Remove</button>
+                    <a class="btn btn-danger" th:href="'/students/remove/' + ${student.id}" role="button">Remove</a>
+                </td>
+                <td>
+                    <p th:if="${student.name.length()} &gt; 3">
+                        Normal
+                    </p>
+                    <p class="p-3 mb-2 bg-danger text-white" th:unless="${student.name.length()} &gt; 3">
+                        Too short
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <a href="/">Back To Main Page</a>
+
+<!--        <div class="row">-->
+<!--            <button id="consoleTestBtn">Console</button>-->
+<!--            <input id="myInput"/>-->
+<!--        </div>-->
+    </div>
+</div>
+</body>
+<footer>
+    <div th:insert="~{my-footer :: foot}"></div>
+</footer>
+</html>
