@@ -5,7 +5,8 @@
     <file type="web" url="file://$PROJECT_DIR$/../mvcn/mvc" />
     <file type="web" url="file://$PROJECT_DIR$/connections" />
     <file type="web" url="file://$PROJECT_DIR$/mvc" />
-    <file type="web" url="file://$PROJECT_DIR$/studentcourses" />
+    <file type="web" url="file://$PROJECT_DIR$/studentcourses-jsp" />
+    <file type="web" url="file://$PROJECT_DIR$/studentcourses-tl" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -15,6 +16,7 @@
         <option value="$PROJECT_DIR$/hibernate/pom.xml" />
         <option value="$PROJECT_DIR$/connection/pom.xml" />
         <option value="$PROJECT_DIR$/studentcourses/pom.xml" />
+        <option value="$PROJECT_DIR$/studentcourses-tl/pom.xml" />
       </list>
     </option>
   </component>

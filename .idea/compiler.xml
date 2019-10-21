@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="studentcourses-tl" />
         <module name="hibernate" />
         <module name="mvc" />
-        <module name="studentcourses" />
         <module name="connections" />
         <module name="injections" />
+        <module name="studentcourses-jsp" />
         <module name="spring-new" />
       </profile>
     </annotationProcessing>
