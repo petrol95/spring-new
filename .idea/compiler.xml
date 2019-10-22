@@ -6,17 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="studentcourses-tl" />
-        <module name="hibernate" />
         <module name="mvc" />
-        <module name="connections" />
+        <module name="hibernate" />
         <module name="injections" />
-        <module name="studentcourses-jsp" />
+        <module name="studentcourses-tl" />
         <module name="spring-new" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
+      <module name="connections" target="1.7" />
       <module name="spring" target="1.5" />
+      <module name="studentcourses-jsp" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
