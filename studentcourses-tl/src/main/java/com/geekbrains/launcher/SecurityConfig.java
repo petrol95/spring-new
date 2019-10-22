@@ -13,42 +13,43 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
-//@EnableGlobalMethodSecurity(securedEnabled = true)
+@EnableGlobalMethodSecurity(securedEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-//    private DataSource myDataSource;
-//
-//    @Autowired
-//    public void setMyDataSource(DataSource myDataSource) {
-//        this.myDataSource = myDataSource;
-//    }
+    private DataSource myDataSource;
+
+    @Autowired
+    public void setMyDataSource(DataSource myDataSource) {
+        this.myDataSource = myDataSource;
+    }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.jdbcAuthentication().dataSource(myDataSource);
+        auth.jdbcAuthentication().dataSource(myDataSource);
 
-        User.UserBuilder users = User.withDefaultPasswordEncoder();
-
-        auth.inMemoryAuthentication()
-                .withUser(users.username("alex").password("123").roles("USER", "ADMIN"))
-                .withUser(users.username("bob").password("123").roles("USER"));
+//        User.UserBuilder users = User.withDefaultPasswordEncoder();
+//
+//        auth.inMemoryAuthentication()
+//                .withUser(users.username("alex").password("123").roles("USER", "ADMIN"))
+//                .withUser(users.username("bob").password("123").roles("USER"));
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-                 .anyRequest().authenticated()
-//                .antMatchers("/").hasAnyRole("USER")
-//                .antMatchers("/admin/**").hasRole("ADMIN")
+//                .anyRequest().authenticated()
+                .antMatchers("/").hasAnyRole("USER")
+                .antMatchers("/admin/**").hasRole("ADMIN")
                 .and()
                 .formLogin()
-//                .loginPage("/login")
-//                // .failureUrl("/ohSh")
-//                .loginProcessingUrl("/authenticateTheUser")
-//                .permitAll()
-//                .and()
-//                .logout()
-                .permitAll();
+                .loginPage("/myLoginPage")
+                .loginProcessingUrl("/authenticateTheUser")
+                .permitAll()
+                .and()
+                .logout()
+                .permitAll()
+                .and()
+                .exceptionHandling().accessDeniedPage("/accessDenied");
 
         /*
         http.authorizeRequests()
@@ -57,8 +58,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .and()
                 .formLogin()
-                .loginPage("/myLoginPage")
-                // .failureUrl("/ohSh")
+                .loginPage("/login")
+//                 .failureUrl("/ohSh")
                 .loginProcessingUrl("/authenticateTheUser")
                 .permitAll()
                 .and()
