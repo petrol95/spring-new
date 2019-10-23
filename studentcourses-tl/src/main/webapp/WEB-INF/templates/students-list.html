@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" th:href="@{/resources/css/main.css}"/>
 </head>
 
-<div th:replace="~{navigation :: navi(StudentsList)}" />
+<div th:replace="~{navigation :: navi(StudentsList)}"/>
 
 <body>
 <div class="container">
@@ -38,8 +38,10 @@
                 </td>
                 <td th:text="${student.name.length()}"/>
                 <td>
-                    <button class="btn btn-primary removeBtn" th:attr="entryIndex = ${student.id}">Remove</button>
-                    <a class="btn btn-danger" th:href="'/students/remove/' + ${student.id}" role="button">Remove</a>
+                    <div sec:authorize="hasRole('ADMIN')">
+                        <!--<button class="btn btn-primary removeBtn" th:attr="entryIndex = ${student.id}">Remove</button>-->
+                        <a class="btn btn-danger" th:href="'/students/remove/' + ${student.id}" role="button">Remove</a>
+                    </div>
                 </td>
                 <td>
                     <p th:if="${student.name.length()} &gt; 3">
@@ -55,10 +57,10 @@
         <br>
         <a href="/">Back To Main Page</a>
 
-<!--        <div class="row">-->
-<!--            <button id="consoleTestBtn">Console</button>-->
-<!--            <input id="myInput"/>-->
-<!--        </div>-->
+        <!--        <div class="row">-->
+        <!--            <button id="consoleTestBtn">Console</button>-->
+        <!--            <input id="myInput"/>-->
+        <!--        </div>-->
     </div>
 </div>
 </body>

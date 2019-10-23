@@ -5,6 +5,7 @@ import com.geekbrains.entities.Student;
 import com.geekbrains.services.CourseService;
 import com.geekbrains.services.StudentsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,6 +40,7 @@ public class StudentsController {
         return "students-list";
     }
 
+    @Secured({"ROLE_ADMIN", "ROLE_MANAGER"})
     @RequestMapping(path = "/{sid}", method = RequestMethod.GET)
     public String showCoursesByStudentId(@PathVariable("sid") int id, Model model) {
         Student student = studentsService.getOneById((long) id);
@@ -51,6 +53,7 @@ public class StudentsController {
         return "student";
     }
 
+    @Secured({"ROLE_ADMIN"})
     @RequestMapping(path="/add", method=RequestMethod.GET)
     public String showAddForm(Model model) {
         Student student = new Student();
@@ -58,18 +61,21 @@ public class StudentsController {
         return "add-student-form";
     }
 
+    @Secured({"ROLE_ADMIN"})
     @RequestMapping(path="/add", method=RequestMethod.POST)
     public String showAddForm(Student student) {
         studentsService.mergeStudent(student);
         return "redirect:/students/list";
     }
 
+    @Secured({"ROLE_ADMIN"})
     @RequestMapping(path="/remove/{id}", method=RequestMethod.GET)
     public String removeById(@PathVariable(value = "id") Long studentId) {
         studentsService.removeById(studentId);
         return "redirect:/students/list";
     }
 
+    @Secured({"ROLE_ADMIN"})
     @RequestMapping(path="/{studentId}/unsubscribe/{courseId}", method=RequestMethod.GET)
     public String unsubscribeByStudentIdAndCourseId(@PathVariable(value = "studentId") Long studentId,
                                           @PathVariable(value = "courseId") Long courseId) {
@@ -82,6 +88,7 @@ public class StudentsController {
         return "redirect:/students/{studentId}";
     }
 
+    @Secured({"ROLE_ADMIN"})
     @RequestMapping(path="/{studentId}/subscribe/{courseId}", method=RequestMethod.GET)
     public String subscribeByStudentIdAndCourseId(@PathVariable(value = "studentId") Long studentId,
                                           @PathVariable(value = "courseId") Long courseId) {

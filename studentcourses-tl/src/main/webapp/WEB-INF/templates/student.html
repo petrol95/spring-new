@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" th:href="@{/resources/css/main.css}"/>
 </head>
 
-<div th:replace="~{navigation :: navi(StudentsInfo)}" />
+<div th:replace="~{navigation :: navi(StudentsInfo)}"/>
 
 <body>
 <div class="container">
@@ -29,8 +29,11 @@
             <tr th:each="course : ${coursesList}">
                 <td th:text="${course.title}"/>
                 <td>
-                    <a class="btn btn-danger" th:href="'/students/' + ${student.id} + '/unsubscribe/' + ${course.id}"
-                       role="button">Remove</a>
+                    <div sec:authorize="hasRole('ADMIN')">
+                        <a class="btn btn-danger"
+                           th:href="'/students/' + ${student.id} + '/unsubscribe/' + ${course.id}"
+                           role="button">Remove</a>
+                    </div>
                 </td>
             </tr>
             </tbody>
@@ -44,8 +47,10 @@
             <tr th:each="course : ${missingCourses}">
                 <td th:text="${course.title}"/>
                 <td>
-                    <a class="btn btn-success" th:href="'/students/' + ${student.id} + '/subscribe/' + ${course.id}"
-                       role="button">Add</a>
+                    <div sec:authorize="hasRole('ADMIN')">
+                        <a class="btn btn-success" th:href="'/students/' + ${student.id} + '/subscribe/' + ${course.id}"
+                           role="button">Add</a>
+                    </div>
                 </td>
             </tr>
             </tbody>
