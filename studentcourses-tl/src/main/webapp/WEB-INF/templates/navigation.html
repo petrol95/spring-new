@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns:th="http://www.thymeleaf.org">
-<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
@@ -31,7 +29,7 @@
                 </li>
                 <li sec:authorize="hasAnyRole('ADMIN','USER','MANAGER')" class="nav-item"
                     th:classappend="${activeTab == 'StudentsList' ? 'active' : ''}">
-                    <a class="nav-link" th:href="@{/students/list}">Students List</a>
+                    <a class="nav-link" th:href="@{/students/list/order/page/0}">Students List</a>
                 </li>
                 <li sec:authorize="hasAnyRole('ADMIN','MANAGER')" class="nav-item"
                     th:classappend="${activeTab == 'StudentsInfo' ? 'active' : ''}">

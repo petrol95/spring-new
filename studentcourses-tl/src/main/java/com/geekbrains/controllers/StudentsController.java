@@ -5,6 +5,8 @@ import com.geekbrains.entities.Student;
 import com.geekbrains.services.CourseService;
 import com.geekbrains.services.StudentsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +19,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/students")
 public class StudentsController {
+    private static int PAGE_ITEMS = 10;
     private StudentsService studentsService;
     private CourseService courseService;
 
@@ -33,10 +36,33 @@ public class StudentsController {
     public StudentsController() {
     }
 
-    @RequestMapping("/list")
-    public String showStudentsList(Model model) {
-        List<Student> allStudents = studentsService.getAllStudentsList();
-        model.addAttribute("studentsList", allStudents);
+//    @RequestMapping("/list")
+//    public String showStudentsList(Model model) {
+//        List<Student> allStudents = studentsService.getAllStudentsList();
+//        model.addAttribute("studentsList", allStudents);
+//        return "students-list";
+//    }
+
+//    @RequestMapping("/list/order")
+//    public String showStudentsListOrderByCoursesNumber(Model model) {
+//        List<Student> allStudents = studentsService.getAllStudentsOrderByCoursesNumber();
+//        model.addAttribute("studentsList", allStudents);
+//        return "students-list";
+//    }
+
+    @RequestMapping("/list/order/page/{sid}")
+    public String showStudentsListOrderByCoursesNumber(@PathVariable("sid") int pageId, Model model) {
+        Page<Student> page = studentsService.getAllStudentsOrderByCoursesNumber(PageRequest.of(pageId, PAGE_ITEMS));
+        List<Student> pageStudents = page.getContent();
+        int totalPages = page.getTotalPages();
+        int current = page.getNumber();
+        int prev = (current == 0) ? 0 : (current - 1);
+        int next = (current == totalPages - 1) ? (totalPages - 1) : (current + 1);
+        model.addAttribute("studentsList", pageStudents);
+        model.addAttribute("totalPages", totalPages);
+        model.addAttribute("current", current);
+        model.addAttribute("prev", prev);
+        model.addAttribute("next", next);
         return "students-list";
     }
 
@@ -65,7 +91,7 @@ public class StudentsController {
     @RequestMapping(path="/add", method=RequestMethod.POST)
     public String showAddForm(Student student) {
         studentsService.mergeStudent(student);
-        return "redirect:/students/list";
+        return "redirect:/students/list/order/page/0";
     }
 
     @Secured({"ROLE_ADMIN"})
