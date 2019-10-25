@@ -2,16 +2,16 @@
 
 <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
 <head>
+    <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-
     <script type="text/javascript" th:src="@{/webjars/jquery/3.3.1/dist/jquery.min.js}"></script>
     <script type="text/javascript" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}"></script>
     <script type="text/javascript" th:src="@{/resources/js/main.js}"></script>
     <link type="text/css" rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}"/>
     <link type="text/css" rel="stylesheet" th:href="@{/resources/css/main.css}"/>
 </head>
-<body>
 
+<body>
 <div class="fluid-container" th:fragment="navi(activeTab)">
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary ">
         <a class="navbar-brand" href="#">GeekSpring</a>
@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li sec:authorize="hasRole('ADMIN')" class="nav-item">
-                    <a class="nav-link" href="/admin">Admin Dashboard</a>
+                    <a class="nav-link" th:href="@{/admin}">Admin Dashboard</a>
                 </li>
                 <li class="nav-item" th:classappend="${activeTab == 'Home' ? 'active' : ''}">
                     <a class="nav-link" th:href="@{/}">Home<span class="sr-only">(current)</span></a>
@@ -46,21 +46,21 @@
                     </a>
                 </li>
 
-                <div sec:authorize="isAnonymous()">
-                    <li class="nav-item">
+                <li class="nav-item">
+                    <div sec:authorize="isAnonymous()">
                         <form th:action="@{/login}">
                             <input type="submit" class="btn btn-success" value="Login"/>
                         </form>
-                    </li>
-                </div>
+                    </div>
+                </li>
 
-                <div sec:authorize="isAuthenticated()">
-                    <li class="nav-item">
+                <li class="nav-item">
+                    <div sec:authorize="isAuthenticated()">
                         <form th:action="@{/logout}" method="POST">
                             <input type="submit" class="btn btn-danger" value="Logout"/>
                         </form>
-                    </li>
-                </div>
+                    </div>
+                </li>
                 <!--<div sec:authorize="isAnonymous()">-->
 
             </ul>

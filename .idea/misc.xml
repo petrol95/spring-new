@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/connection/pom.xml" />
         <option value="$PROJECT_DIR$/studentcourses/pom.xml" />
         <option value="$PROJECT_DIR$/studentcourses-tl/pom.xml" />
+        <option value="$PROJECT_DIR$/studentcourses-jsp/pom.xml" />
       </list>
     </option>
   </component>
