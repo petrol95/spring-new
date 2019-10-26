@@ -12,11 +12,17 @@
         <module name="injections" />
         <module name="studentcourses-jsp" />
         <module name="spring-new" />
+        <module name="spring-boot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="connections" target="1.7" />
       <module name="spring" target="1.5" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-boot" options="-parameters" />
+    </option>
   </component>
 </project>

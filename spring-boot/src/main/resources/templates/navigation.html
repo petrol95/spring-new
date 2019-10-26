@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.3.1/dist/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/main.js}"></script>
+    <link type="text/css" rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/main.css}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title></title>
+</head>
+
+<body>
+<div class="fluid-container" th:fragment="navi(activeTab)">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary ">
+        <a class="navbar-brand" href="#">GeekSpring</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+
+
+                <li sec:authorize="isAnonymous()" class="nav-item">
+                    <a class="nav-link" th:href="@{/login}">Sign In <span class="icon-bar"> </span></a>
+                </li>
+                <li sec:authorize="isAnonymous()" class="nav-item">
+                    <a class="nav-link" th:href="@{/register/showRegistrationForm}">Registration</a>
+                </li>
+
+                <li sec:authorize="isAuthenticated()" class="nav-item"
+                    th:classappend="${activeTab == 'Info' ? 'active' : ''}">
+                    <a class="nav-link" th:href="@{/profile}"><i class="fa fa-user-circle"></i></a>
+                </li>
+
+                <li sec:authorize="isAnonymous()" class="nav-item">
+                    <a th:href="@{/login}" class="btn btn-success" role="button">Login</a>
+                </li>
+
+                <li sec:authorize="hasRole('ADMIN')" class="nav-item">
+                    <a class="nav-link" th:href="@{/admin}">Admin Dashboard</a>
+                </li>
+                <li class="nav-item" th:classappend="${activeTab == 'Home' ? 'active' : ''}">
+                    <a class="nav-link" th:href="@{/}">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li sec:authorize="hasAnyRole('ADMIN','USER','MANAGER')" class="nav-item"
+                    th:classappend="${activeTab == 'StudentsList' ? 'active' : ''}">
+                    <a class="nav-link" th:href="@{/students/list/order/page/0}">Students List</a>
+                </li>
+                <li sec:authorize="hasAnyRole('ADMIN','MANAGER')" class="nav-item"
+                    th:classappend="${activeTab == 'StudentsInfo' ? 'active' : ''}">
+                    <a class="nav-link" th:href="@{/students/3}">Student Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+
+                <li sec:authorize="isAuthenticated()" class="nav-item"
+                    th:classappend="${activeTab == 'Profile' ? 'active' : ''}">
+                    <a class="nav-link" th:href="@{/profile}">
+                        <div sec:authentication="principal.username"></div>
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <div sec:authorize="isAuthenticated()">
+                        <form th:action="@{/logout}" method="POST">
+                            <input type="submit" class="btn btn-danger" value="Logout"/>
+                        </form>
+                    </div>
+                </li>
+                <!--<div sec:authorize="isAnonymous()">-->
+
+            </ul>
+        </div>
+    </nav>
+    <div class="visible-md" style="height:80px;"></div>
+</div>
+
+</body>
+</html>

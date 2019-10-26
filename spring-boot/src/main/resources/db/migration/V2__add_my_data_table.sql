@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS my_data_table;
+CREATE TABLE my_data_table (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    name VARCHAR(45) NULL,
+    PRIMARY KEY (id)
+    ) ENGINE=InnoDB CHARSET=latin1;

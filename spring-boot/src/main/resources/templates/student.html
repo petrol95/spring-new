@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>Students List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.3.1/dist/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/main.js}"></script>
+    <link type="text/css" rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/resources/css/main.css}"/>
+</head>
+
+<div th:replace="~{navigation :: navi(StudentsInfo)}"/>
+
+<body>
+<div class="container">
+    <div class="row">
+        <!--/*@thymesVar id="student" type="com.geekbrains.entities.Student"*/-->
+        <h1 th:text="${student.name}"/>
+    </div>
+
+    <div class="row">
+        <table class="table">
+            <tbody>
+            <!--/*@thymesVar id="coursesList" type="java.util.List<com.geekbrains.entities.Course>"*/-->
+            <tr th:each="course : ${coursesList}">
+                <td th:text="${course.title}"/>
+                <td>
+                    <div sec:authorize="hasRole('ADMIN')">
+                        <a class="btn btn-danger"
+                           th:href="'/students/' + ${student.id} + '/unsubscribe/' + ${course.id}"
+                           role="button">Remove</a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <table class="table">
+            <tbody>
+            <!--/*@thymesVar id="coursesList" type="java.util.List<com.geekbrains.entities.Course>"*/-->
+            <tr th:each="course : ${missingCourses}">
+                <td th:text="${course.title}"/>
+                <td>
+                    <div sec:authorize="hasRole('ADMIN')">
+                        <a class="btn btn-success" th:href="'/students/' + ${student.id} + '/subscribe/' + ${course.id}"
+                           role="button">Add</a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <a href="/students/list">Back</a>
+    </div>
+</div>
+</body>
+</html>
+
