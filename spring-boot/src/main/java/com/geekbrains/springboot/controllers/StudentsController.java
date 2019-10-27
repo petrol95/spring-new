@@ -98,7 +98,7 @@ public class StudentsController {
     @RequestMapping(path="/remove/{id}", method=RequestMethod.GET)
     public String removeById(@PathVariable(value = "id") Long studentId) {
         studentsService.removeById(studentId);
-        return "redirect:/students/list";
+        return "redirect:/students/list/order/page/0";
     }
 
     @Secured({"ROLE_ADMIN"})

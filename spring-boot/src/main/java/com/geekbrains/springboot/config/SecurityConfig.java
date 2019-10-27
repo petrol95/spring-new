@@ -47,8 +47,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-//                .antMatchers("/").permitAll()
-                .antMatchers("/").hasAnyRole("MANAGER", "EMPLOYEE", "ADMIN")
+                .antMatchers("/").permitAll()
+//                .antMatchers("/").hasAnyRole("MANAGER", "EMPLOYEE", "ADMIN")
                 .antMatchers("/register/**").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .antMatchers("/resources/**").permitAll()

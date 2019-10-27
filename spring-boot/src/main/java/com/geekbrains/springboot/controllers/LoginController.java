@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class LoginController {
-    private UserRepository userRepository;
 
     @GetMapping("/login")
     public String showMyLoginPage() {
@@ -28,9 +27,4 @@ public class LoginController {
 //        return "plain-login";
 //    }
 
-    @GetMapping("/dropUser")
-    public String dropUser() {
-        userRepository.deleteById(2L);
-        return "login";
-    }
 }
