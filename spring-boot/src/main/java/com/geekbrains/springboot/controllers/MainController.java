@@ -16,9 +16,7 @@ public class MainController {
     @Secured({"ROLE_ADMIN"})
     @RequestMapping("/onlyYou")
     @ResponseBody
-    public String onlyYou() {
-        return "index";
-    }
+    public String onlyYou() { return "index"; }
 
     @RequestMapping("favicon.ico")
     public String appFavicon() {

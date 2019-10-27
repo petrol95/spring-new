@@ -1,6 +1,5 @@
 package com.geekbrains.springboot.controllers;
 
-import com.geekbrains.springboot.repositories.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 

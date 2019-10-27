@@ -2,17 +2,10 @@ package com.geekbrains.springboot.entities;
 
 import com.geekbrains.springboot.validation.FieldMatch;
 import com.geekbrains.springboot.validation.ValidEmail;
-import org.hibernate.annotations.Check;
 
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Collection;
-
-import javax.validation.constraints.NotNull;
 
 @FieldMatch(first = "password", second = "matchingPassword", message = "The password fields must match")
 public class SystemUser {
@@ -42,8 +35,10 @@ public class SystemUser {
     @Size(min = 1, message = "is required")
     private String email;
 
-    public SystemUser() {
+    @Size(min = 1, message = "select at least one role")
+    private Collection<Role> roles;
 
+    public SystemUser() {
     }
 
     public String getUserName() {
@@ -94,5 +89,12 @@ public class SystemUser {
         this.email = email;
     }
 
+    public Collection<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Collection<Role> roles) {
+        this.roles = roles;
+    }
 }
 

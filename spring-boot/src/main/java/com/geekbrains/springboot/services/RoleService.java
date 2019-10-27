@@ -5,11 +5,10 @@ import com.geekbrains.springboot.repositories.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Collection;
 
 @Service
 public class RoleService {
-
     private RoleRepository roleRepository;
 
     @Autowired
@@ -20,8 +19,7 @@ public class RoleService {
     public RoleService() {
     }
 
-    public List<Role> getAllRoles() {
-        return (List)roleRepository.findAll();
+    public Collection<Role> getAllRoles() {
+        return (Collection<Role>) roleRepository.findAll();
     }
-
 }
