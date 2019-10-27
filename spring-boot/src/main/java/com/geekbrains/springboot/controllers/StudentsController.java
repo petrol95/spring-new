@@ -4,16 +4,25 @@ import com.geekbrains.springboot.entities.Course;
 import com.geekbrains.springboot.entities.Student;
 import com.geekbrains.springboot.services.CourseService;
 import com.geekbrains.springboot.services.StudentsService;
+import com.geekbrains.springboot.services.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -22,6 +31,14 @@ public class StudentsController {
     private static int PAGE_ITEMS = 10;
     private StudentsService studentsService;
     private CourseService courseService;
+    private UserService userService;
+
+    @Autowired
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
+
+    private final Logger logger = LoggerFactory.getLogger(RegistrationController.class);
 
     @Autowired
     public void setStudentsService(StudentsService studentsService) {
@@ -91,6 +108,30 @@ public class StudentsController {
     @RequestMapping(path="/add", method=RequestMethod.POST)
     public String showAddForm(Student student) {
         studentsService.mergeStudent(student);
+        return "redirect:/students/list/order/page/0";
+    }
+
+    @InitBinder
+    public void initBinder(WebDataBinder dataBinder) {
+        StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
+        dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
+    }
+
+    @Secured({"ROLE_ADMIN", "ROLE_MANAGER"})
+    @PostMapping("/processAddStudentForm")
+    public String processAddStudentForm(@Valid @ModelAttribute("student") Student theStudent,
+                                          BindingResult theBindingResult, Model theModel) {
+        String studentName = theStudent.getLastName();
+        logger.debug("Processing registration form for: " + studentName);
+        if (theBindingResult.hasErrors()) {
+            return "registration-form";
+        }
+        theStudent.setAddedDate(new Date());
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String currentUserName = ((UserDetails)auth.getPrincipal()).getUsername();
+        theStudent.setAddedUser(userService.findByUserName(currentUserName));
+        studentsService.mergeStudent(theStudent);
+        logger.debug("Successfully created student: " + studentName);
         return "redirect:/students/list/order/page/0";
     }
 
