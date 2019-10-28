@@ -10,20 +10,20 @@
 <div class="container">
     <h1>Welcome page</h1>
 
-    <div sec:authorize="hasRole('ADMIN')">
+    <p sec:authorize="hasRole('ADMIN')">
         This content will only be visible to users who have the "supervisor" authority in their list of <tt>GrantedAuthoritys</tt>.
-    </div>
+    </p>
 
-    <div sec:authorize="isAuthenticated()">
-        <h2>Index:</h2>
-        <br>
-        <a th:href="@{/students/list/order/page/0}">Show students list</a>
-        <br>
-        <div sec:authorize="hasRole('ADMIN')">
-            <a th:href="@{/students/add}">Add new student</a>
-        </div>
-    </div>
-    <br>
+<!--    <div sec:authorize="isAuthenticated()">-->
+<!--        <h2>Index:</h2>-->
+<!--        <br>-->
+<!--        <a th:href="@{/students/list/order/page/0}">Show students list</a>-->
+<!--        <br>-->
+<!--        <div sec:authorize="hasRole('ADMIN')">-->
+<!--            <a th:href="@{/students/add}">Add new student</a>-->
+<!--        </div>-->
+<!--    </div>-->
+
 </div>
 </body>
 

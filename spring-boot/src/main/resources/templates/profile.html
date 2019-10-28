@@ -11,6 +11,7 @@
 
     <div sec:authorize="isAuthenticated()">
         <h1 sec:authentication="principal.username"></h1>
+        <h5>Roles</h5>
         <div sec:authentication="principal.authorities"></div>
     </div>
 

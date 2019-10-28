@@ -39,8 +39,8 @@
                 </li>
 
                 <li sec:authorize="hasAnyRole('ADMIN','MANAGER')" class="nav-item"
-                    th:classappend="${activeTab == 'StudentsInfo' ? 'active' : ''}">
-                    <a class="nav-link" th:href="@{/students/3}">Student Info</a>
+                    th:classappend="${activeTab == 'AddStudent' ? 'active' : ''}">
+                    <a class="nav-link" th:href="@{/students/add}">Add Student</a>
                 </li>
 
                 <!--                <li class="nav-item">-->
@@ -51,7 +51,7 @@
                     th:classappend="${activeTab == 'Profile' ? 'active' : ''}">
                     <a class="nav-link" th:href="@{/profile}">
                         <i class="fa fa-user-circle"></i>
-<!--                        <div sec:authentication="principal.username"></div>-->
+                        <!--                        <div sec:authentication="principal.username"></div>-->
                     </a>
                 </li>
 
