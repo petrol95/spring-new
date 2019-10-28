@@ -124,7 +124,7 @@ public class StudentsController {
         String studentName = theStudent.getLastName();
         logger.debug("Processing registration form for: " + studentName);
         if (theBindingResult.hasErrors()) {
-            return "registration-form";
+            return "add-student-form";
         }
         theStudent.setAddedDate(new Date());
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();

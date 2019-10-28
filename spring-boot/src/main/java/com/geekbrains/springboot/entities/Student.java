@@ -1,6 +1,12 @@
 package com.geekbrains.springboot.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.geekbrains.springboot.validation.ValidEmail;
+import com.geekbrains.springboot.validation.ValidPhone;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -14,15 +20,25 @@ public class Student {
     @Column(name = "id")
     private Long id;
 
+    @NotNull(message = "is required")
+    @Size(min = 2, max = 50, message = "size should be from 2 to 50 symbols")
     @Column(name = "firstname")
     private String firstName;
 
+    @NotNull(message = "is required")
+    @Size(min = 2, max = 50, message = "size should be from 2 to 50 symbols")
     @Column(name = "lastname")
     private String lastName;
 
+    @ValidPhone
+    @NotNull(message = "is required")
+    @Size(min = 6, message = "size should be at least 6 symbols")
     @Column(name = "phone")
     private String phone;
 
+    @ValidEmail
+    @NotNull(message = "is required")
+    @Size(min = 1, message = "size should be at least 1 symbol")
     @Column(name = "email")
     private String email;
 
@@ -30,6 +46,8 @@ public class Student {
     @JoinColumn(name = "user_id")
     private User addedUser;
 
+    @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")
     @Column(name = "add_date")
     private Date addedDate;
 
