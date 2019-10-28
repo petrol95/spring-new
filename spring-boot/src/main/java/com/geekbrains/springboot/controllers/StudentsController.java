@@ -73,8 +73,17 @@ public class StudentsController {
         List<Student> pageStudents = page.getContent();
         int totalPages = page.getTotalPages();
         int current = page.getNumber();
-        int prev = (current == 0) ? 0 : (current - 1);
-        int next = (current == totalPages - 1) ? (totalPages - 1) : (current + 1);
+        int prev, next;
+        if (current == 0) {
+            prev = current;
+            next = current;
+        } else if (current == totalPages - 1) {
+            prev = current - 1;
+            next = current;
+        } else {
+            prev = current - 1;
+            next = current + 1;
+        }
         model.addAttribute("studentsList", pageStudents);
         model.addAttribute("totalPages", totalPages);
         model.addAttribute("current", current);
