@@ -9,6 +9,7 @@
         <module name="studentcourses-tl" />
         <module name="hibernate" />
         <module name="mvc" />
+        <module name="jsonex" />
         <module name="injections" />
         <module name="studentcourses-jsp" />
         <module name="spring-new" />

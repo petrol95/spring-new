@@ -131,7 +131,7 @@ public class StudentsController {
     public String processAddStudentForm(@Valid @ModelAttribute("student") Student theStudent,
                                           BindingResult theBindingResult, Model theModel) {
         String studentName = theStudent.getLastName();
-        logger.debug("Processing registration form for: " + studentName);
+        logger.debug("Processing adding form for: " + studentName);
         if (theBindingResult.hasErrors()) {
             return "add-student-form";
         }
