@@ -1,0 +1,337 @@
+2019-10-30 14:14:15.030  INFO 2500 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Starting GbRestDemoApplication on OLGA-HOME with PID 2500 (C:\GeekBrains\repo\IdeaProjects\spring-new\rest\target\classes started by olga in C:\GeekBrains\repo\IdeaProjects\spring-new)
+2019-10-30 14:14:15.035 DEBUG 2500 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Running with Spring Boot v2.2.0.RELEASE, Spring v5.2.0.RELEASE
+2019-10-30 14:14:15.035  INFO 2500 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : No active profile set, falling back to default profiles: default
+2019-10-30 14:14:16.622  INFO 2500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-30 14:14:16.704  INFO 2500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69ms. Found 1 repository interfaces.
+2019-10-30 14:14:17.204  INFO 2500 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-30 14:14:17.559  INFO 2500 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8189 (http)
+2019-10-30 14:14:17.569  INFO 2500 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-30 14:14:17.569  INFO 2500 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-30 14:14:17.764  INFO 2500 --- [main] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring embedded WebApplicationContext
+2019-10-30 14:14:17.919  INFO 2500 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.6 by Redgate
+2019-10-30 14:14:17.934  INFO 2500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-30 14:14:18.134  INFO 2500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-30 14:14:18.149  INFO 2500 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/rest_db (MySQL 8.0)
+2019-10-30 14:14:18.304  INFO 2500 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.083s)
+2019-10-30 14:14:18.319  INFO 2500 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `rest_db`: 1
+2019-10-30 14:14:18.324  INFO 2500 --- [main] o.f.core.internal.command.DbMigrate      : Schema `rest_db` is up to date. No migration necessary.
+2019-10-30 14:14:18.658  INFO 2500 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-10-30 14:14:18.833  INFO 2500 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-10-30 14:14:19.162  INFO 2500 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-10-30 14:14:19.334  INFO 2500 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-30 14:14:20.088  INFO 2500 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-30 14:14:20.098  INFO 2500 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-30 14:14:20.343  WARN 2500 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-30 14:14:20.548  INFO 2500 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-30 14:14:20.863  INFO 2500 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8189 (http) with context path '/restapp'
+2019-10-30 14:14:20.868  INFO 2500 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Started GbRestDemoApplication in 6.661 seconds (JVM running for 8.217)
+2019-10-30 14:14:47.835  INFO 2500 --- [http-nio-8189-exec-1] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-30 14:16:50.135  INFO 5968 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Starting GbRestDemoApplication on OLGA-HOME with PID 5968 (C:\GeekBrains\repo\IdeaProjects\spring-new\rest\target\classes started by olga in C:\GeekBrains\repo\IdeaProjects\spring-new)
+2019-10-30 14:16:50.145 DEBUG 5968 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Running with Spring Boot v2.2.0.RELEASE, Spring v5.2.0.RELEASE
+2019-10-30 14:16:50.145  INFO 5968 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : No active profile set, falling back to default profiles: default
+2019-10-30 14:16:51.281  INFO 5968 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-30 14:16:51.366  INFO 5968 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71ms. Found 1 repository interfaces.
+2019-10-30 14:16:52.089  INFO 5968 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-30 14:16:52.569  INFO 5968 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8189 (http)
+2019-10-30 14:16:52.584  INFO 5968 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-30 14:16:52.589  INFO 5968 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-30 14:16:52.756  INFO 5968 --- [main] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring embedded WebApplicationContext
+2019-10-30 14:16:52.894  INFO 5968 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.6 by Redgate
+2019-10-30 14:16:52.899  INFO 5968 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-30 14:16:53.014  INFO 5968 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-30 14:16:53.024  INFO 5968 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/rest_db (MySQL 8.0)
+2019-10-30 14:16:53.104  INFO 5968 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.025s)
+2019-10-30 14:16:53.119  INFO 5968 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `rest_db`: 1
+2019-10-30 14:16:53.119  INFO 5968 --- [main] o.f.core.internal.command.DbMigrate      : Schema `rest_db` is up to date. No migration necessary.
+2019-10-30 14:16:53.309  INFO 5968 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-10-30 14:16:53.374  INFO 5968 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-10-30 14:16:53.494  INFO 5968 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-10-30 14:16:53.589  INFO 5968 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-30 14:16:54.104  INFO 5968 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-30 14:16:54.109  INFO 5968 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-30 14:16:54.351  WARN 5968 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-30 14:16:54.549  INFO 5968 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-30 14:16:54.869  INFO 5968 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8189 (http) with context path '/restapp'
+2019-10-30 14:16:54.869  INFO 5968 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Started GbRestDemoApplication in 5.459 seconds (JVM running for 6.987)
+2019-10-30 14:17:31.052  INFO 5968 --- [http-nio-8189-exec-1] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-30 14:19:07.139  INFO 1772 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Starting GbRestDemoApplication on OLGA-HOME with PID 1772 (C:\GeekBrains\repo\IdeaProjects\spring-new\rest\target\classes started by olga in C:\GeekBrains\repo\IdeaProjects\spring-new)
+2019-10-30 14:19:07.144 DEBUG 1772 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Running with Spring Boot v2.2.0.RELEASE, Spring v5.2.0.RELEASE
+2019-10-30 14:19:07.144  INFO 1772 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : No active profile set, falling back to default profiles: default
+2019-10-30 14:19:08.664  INFO 1772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-30 14:19:08.742  INFO 1772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67ms. Found 1 repository interfaces.
+2019-10-30 14:19:09.228  INFO 1772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-30 14:19:09.592  INFO 1772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8189 (http)
+2019-10-30 14:19:09.607  INFO 1772 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-30 14:19:09.607  INFO 1772 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-30 14:19:09.832  INFO 1772 --- [main] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring embedded WebApplicationContext
+2019-10-30 14:19:09.982  INFO 1772 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.6 by Redgate
+2019-10-30 14:19:09.997  INFO 1772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-30 14:19:10.183  INFO 1772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-30 14:19:10.198  INFO 1772 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/rest_db (MySQL 8.0)
+2019-10-30 14:19:10.298  INFO 1772 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.031s)
+2019-10-30 14:19:10.313  INFO 1772 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `rest_db`: 1
+2019-10-30 14:19:10.313  INFO 1772 --- [main] o.f.core.internal.command.DbMigrate      : Schema `rest_db` is up to date. No migration necessary.
+2019-10-30 14:19:10.644  INFO 1772 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-10-30 14:19:10.805  INFO 1772 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-10-30 14:19:11.022  INFO 1772 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-10-30 14:19:11.190  INFO 1772 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-30 14:19:11.690  INFO 1772 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-30 14:19:11.700  INFO 1772 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-30 14:19:11.945  WARN 1772 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-30 14:19:12.159  INFO 1772 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-30 14:19:12.414  INFO 1772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8189 (http) with context path '/restapp'
+2019-10-30 14:19:12.419  INFO 1772 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Started GbRestDemoApplication in 6.106 seconds (JVM running for 7.724)
+2019-10-30 14:19:20.804  INFO 1772 --- [http-nio-8189-exec-1] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-30 15:31:56.435  INFO 12212 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Starting GbRestDemoApplication on OLGA-HOME with PID 12212 (C:\GeekBrains\repo\IdeaProjects\spring-new\rest\target\classes started by olga in C:\GeekBrains\repo\IdeaProjects\spring-new)
+2019-10-30 15:31:56.447 DEBUG 12212 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Running with Spring Boot v2.2.0.RELEASE, Spring v5.2.0.RELEASE
+2019-10-30 15:31:56.448  INFO 12212 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : No active profile set, falling back to default profiles: default
+2019-10-30 15:31:57.457  INFO 12212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-30 15:31:57.667  INFO 12212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 199ms. Found 1 repository interfaces.
+2019-10-30 15:31:58.312  INFO 12212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-30 15:31:58.690  INFO 12212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8189 (http)
+2019-10-30 15:31:58.703  INFO 12212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-30 15:31:58.704  INFO 12212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-30 15:31:58.866  INFO 12212 --- [main] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring embedded WebApplicationContext
+2019-10-30 15:31:59.025  INFO 12212 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.6 by Redgate
+2019-10-30 15:31:59.042  INFO 12212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-30 15:31:59.292  INFO 12212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-30 15:31:59.305  INFO 12212 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/rest_db (MySQL 8.0)
+2019-10-30 15:31:59.371  INFO 12212 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.018s)
+2019-10-30 15:31:59.383  INFO 12212 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `rest_db`: 1
+2019-10-30 15:31:59.384  INFO 12212 --- [main] o.f.core.internal.command.DbMigrate      : Schema `rest_db` is up to date. No migration necessary.
+2019-10-30 15:31:59.620  INFO 12212 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-10-30 15:31:59.698  INFO 12212 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-10-30 15:31:59.858  INFO 12212 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-10-30 15:31:59.959  INFO 12212 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-30 15:32:01.400  INFO 12212 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-30 15:32:01.409  INFO 12212 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-30 15:32:01.742  WARN 12212 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-30 15:32:02.040  INFO 12212 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-30 15:32:02.385  INFO 12212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8189 (http) with context path '/restapp'
+2019-10-30 15:32:02.388  INFO 12212 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Started GbRestDemoApplication in 7.102 seconds (JVM running for 9.948)
+2019-10-30 15:32:12.264  INFO 12212 --- [http-nio-8189-exec-2] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-30 15:33:12.063 ERROR 12212 --- [http-nio-8189-exec-5] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/restapp] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135) ~[na:1.8.0_221]
+	at com.geekbrains.gbrestdemo.services.StudentsService.getStudentById(StudentsService.java:18) ~[classes/:na]
+	at com.geekbrains.gbrestdemo.controllers.StudentRestController.getStudentById(StudentRestController.java:20) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+
+2019-10-30 15:35:46.090  INFO 12224 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Starting GbRestDemoApplication on OLGA-HOME with PID 12224 (C:\GeekBrains\repo\IdeaProjects\spring-new\rest\target\classes started by olga in C:\GeekBrains\repo\IdeaProjects\spring-new)
+2019-10-30 15:35:46.095 DEBUG 12224 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Running with Spring Boot v2.2.0.RELEASE, Spring v5.2.0.RELEASE
+2019-10-30 15:35:46.095  INFO 12224 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : No active profile set, falling back to default profiles: default
+2019-10-30 15:35:47.506  INFO 12224 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-30 15:35:47.608  INFO 12224 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83ms. Found 1 repository interfaces.
+2019-10-30 15:35:48.394  INFO 12224 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-30 15:35:48.926  INFO 12224 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8189 (http)
+2019-10-30 15:35:48.943  INFO 12224 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-30 15:35:48.944  INFO 12224 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-30 15:35:49.167  INFO 12224 --- [main] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring embedded WebApplicationContext
+2019-10-30 15:35:49.328  INFO 12224 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.6 by Redgate
+2019-10-30 15:35:49.337  INFO 12224 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-30 15:35:49.474  INFO 12224 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-30 15:35:49.483  INFO 12224 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/rest_db (MySQL 8.0)
+2019-10-30 15:35:49.544  INFO 12224 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.019s)
+2019-10-30 15:35:49.556  INFO 12224 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `rest_db`: 1
+2019-10-30 15:35:49.557  INFO 12224 --- [main] o.f.core.internal.command.DbMigrate      : Schema `rest_db` is up to date. No migration necessary.
+2019-10-30 15:35:49.749  INFO 12224 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-10-30 15:35:49.821  INFO 12224 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-10-30 15:35:49.949  INFO 12224 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-10-30 15:35:50.089  INFO 12224 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-30 15:35:50.644  INFO 12224 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-30 15:35:50.654  INFO 12224 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-30 15:35:50.917  WARN 12224 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-30 15:35:51.142  INFO 12224 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-30 15:35:51.471  INFO 12224 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8189 (http) with context path '/restapp'
+2019-10-30 15:35:51.474  INFO 12224 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Started GbRestDemoApplication in 6.086 seconds (JVM running for 7.469)
+2019-10-30 15:36:03.638  INFO 12224 --- [http-nio-8189-exec-1] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-30 16:02:07.063  INFO 5076 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Starting GbRestDemoApplication on OLGA-HOME with PID 5076 (C:\GeekBrains\repo\IdeaProjects\spring-new\rest\target\classes started by olga in C:\GeekBrains\repo\IdeaProjects\spring-new)
+2019-10-30 16:02:07.076 DEBUG 5076 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Running with Spring Boot v2.2.0.RELEASE, Spring v5.2.0.RELEASE
+2019-10-30 16:02:07.078  INFO 5076 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : No active profile set, falling back to default profiles: default
+2019-10-30 16:02:08.292  INFO 5076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-30 16:02:08.357  INFO 5076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 1 repository interfaces.
+2019-10-30 16:02:08.832  INFO 5076 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-30 16:02:09.142  INFO 5076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8189 (http)
+2019-10-30 16:02:09.157  INFO 5076 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-30 16:02:09.157  INFO 5076 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-30 16:02:09.337  INFO 5076 --- [main] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring embedded WebApplicationContext
+2019-10-30 16:02:09.482  INFO 5076 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.6 by Redgate
+2019-10-30 16:02:09.492  INFO 5076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-30 16:02:09.632  INFO 5076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-30 16:02:09.647  INFO 5076 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/rest_db (MySQL 8.0)
+2019-10-30 16:02:09.707  INFO 5076 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.018s)
+2019-10-30 16:02:09.717  INFO 5076 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `rest_db`: 1
+2019-10-30 16:02:09.722  INFO 5076 --- [main] o.f.core.internal.command.DbMigrate      : Schema `rest_db` is up to date. No migration necessary.
+2019-10-30 16:02:09.918  INFO 5076 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-10-30 16:02:09.973  INFO 5076 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-10-30 16:02:10.140  INFO 5076 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-10-30 16:02:10.240  INFO 5076 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-30 16:02:10.904  INFO 5076 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-30 16:02:10.914  INFO 5076 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-30 16:02:11.184  WARN 5076 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-30 16:02:11.514  INFO 5076 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-30 16:02:11.929  INFO 5076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8189 (http) with context path '/restapp'
+2019-10-30 16:02:11.934  INFO 5076 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Started GbRestDemoApplication in 5.954 seconds (JVM running for 8.305)
+2019-10-30 16:02:19.949  INFO 5076 --- [http-nio-8189-exec-1] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-30 16:15:51.172  INFO 11880 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Starting GbRestDemoApplication on OLGA-HOME with PID 11880 (C:\GeekBrains\repo\IdeaProjects\spring-new\rest\target\classes started by olga in C:\GeekBrains\repo\IdeaProjects\spring-new)
+2019-10-30 16:15:51.187 DEBUG 11880 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Running with Spring Boot v2.2.0.RELEASE, Spring v5.2.0.RELEASE
+2019-10-30 16:15:51.187  INFO 11880 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : No active profile set, falling back to default profiles: default
+2019-10-30 16:15:52.448  INFO 11880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-30 16:15:52.553  INFO 11880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85ms. Found 1 repository interfaces.
+2019-10-30 16:15:52.918  INFO 11880 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-30 16:15:53.217  INFO 11880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8189 (http)
+2019-10-30 16:15:53.232  INFO 11880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-30 16:15:53.232  INFO 11880 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-30 16:15:53.442  INFO 11880 --- [main] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring embedded WebApplicationContext
+2019-10-30 16:15:53.612  INFO 11880 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.6 by Redgate
+2019-10-30 16:15:53.617  INFO 11880 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-30 16:15:53.752  INFO 11880 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-30 16:15:53.762  INFO 11880 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/rest_db (MySQL 8.0)
+2019-10-30 16:15:53.837  INFO 11880 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.023s)
+2019-10-30 16:15:53.847  INFO 11880 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `rest_db`: 1
+2019-10-30 16:15:53.852  INFO 11880 --- [main] o.f.core.internal.command.DbMigrate      : Schema `rest_db` is up to date. No migration necessary.
+2019-10-30 16:15:54.067  INFO 11880 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-10-30 16:15:54.127  INFO 11880 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-10-30 16:15:54.248  INFO 11880 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-10-30 16:15:54.342  INFO 11880 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-30 16:15:54.857  INFO 11880 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-30 16:15:54.867  INFO 11880 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-30 16:15:55.107  WARN 11880 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-30 16:15:55.312  INFO 11880 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-30 16:15:55.595  INFO 11880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8189 (http) with context path '/restapp'
+2019-10-30 16:15:55.600  INFO 11880 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Started GbRestDemoApplication in 5.203 seconds (JVM running for 6.368)
+2019-10-30 16:16:05.294  INFO 11880 --- [http-nio-8189-exec-2] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-30 17:07:00.048  INFO 8504 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Starting GbRestDemoApplication on OLGA-HOME with PID 8504 (C:\GeekBrains\repo\IdeaProjects\spring-new\rest\target\classes started by olga in C:\GeekBrains\repo\IdeaProjects\spring-new)
+2019-10-30 17:07:00.078 DEBUG 8504 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Running with Spring Boot v2.2.0.RELEASE, Spring v5.2.0.RELEASE
+2019-10-30 17:07:00.078  INFO 8504 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : No active profile set, falling back to default profiles: default
+2019-10-30 17:07:01.760  INFO 8504 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-30 17:07:01.824  INFO 8504 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 1 repository interfaces.
+2019-10-30 17:07:02.244  INFO 8504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-30 17:07:02.673  INFO 8504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8189 (http)
+2019-10-30 17:07:02.688  INFO 8504 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-30 17:07:02.688  INFO 8504 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-30 17:07:02.903  INFO 8504 --- [main] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring embedded WebApplicationContext
+2019-10-30 17:07:03.064  INFO 8504 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.6 by Redgate
+2019-10-30 17:07:03.084  INFO 8504 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-30 17:07:03.239  INFO 8504 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-30 17:07:03.249  INFO 8504 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/rest_db (MySQL 8.0)
+2019-10-30 17:07:03.308  INFO 8504 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.017s)
+2019-10-30 17:07:03.318  INFO 8504 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `rest_db`: 1
+2019-10-30 17:07:03.318  INFO 8504 --- [main] o.f.core.internal.command.DbMigrate      : Schema `rest_db` is up to date. No migration necessary.
+2019-10-30 17:07:03.518  INFO 8504 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-10-30 17:07:03.578  INFO 8504 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-10-30 17:07:03.795  INFO 8504 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-10-30 17:07:03.910  INFO 8504 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-30 17:07:04.618  INFO 8504 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-30 17:07:04.628  INFO 8504 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-30 17:07:04.980  WARN 8504 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-30 17:07:05.282  INFO 8504 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-30 17:07:05.707  INFO 8504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8189 (http) with context path '/restapp'
+2019-10-30 17:07:05.712  INFO 8504 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Started GbRestDemoApplication in 7.152 seconds (JVM running for 10.322)
+2019-10-30 17:07:21.631  INFO 8504 --- [http-nio-8189-exec-1] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-30 17:12:11.529  INFO 212 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Starting GbRestDemoApplication on OLGA-HOME with PID 212 (C:\GeekBrains\repo\IdeaProjects\spring-new\rest\target\classes started by olga in C:\GeekBrains\repo\IdeaProjects\spring-new)
+2019-10-30 17:12:11.534 DEBUG 212 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Running with Spring Boot v2.2.0.RELEASE, Spring v5.2.0.RELEASE
+2019-10-30 17:12:11.534  INFO 212 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : No active profile set, falling back to default profiles: default
+2019-10-30 17:12:12.672  INFO 212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-30 17:12:12.789  INFO 212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100ms. Found 1 repository interfaces.
+2019-10-30 17:12:13.484  INFO 212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-30 17:12:13.879  INFO 212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8189 (http)
+2019-10-30 17:12:13.896  INFO 212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-30 17:12:13.896  INFO 212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-30 17:12:14.049  INFO 212 --- [main] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring embedded WebApplicationContext
+2019-10-30 17:12:14.169  INFO 212 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.6 by Redgate
+2019-10-30 17:12:14.174  INFO 212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-30 17:12:14.310  INFO 212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-30 17:12:14.321  INFO 212 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/rest_db (MySQL 8.0)
+2019-10-30 17:12:14.400  INFO 212 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.020s)
+2019-10-30 17:12:14.412  INFO 212 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `rest_db`: 1
+2019-10-30 17:12:14.413  INFO 212 --- [main] o.f.core.internal.command.DbMigrate      : Schema `rest_db` is up to date. No migration necessary.
+2019-10-30 17:12:14.593  INFO 212 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-10-30 17:12:14.663  INFO 212 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-10-30 17:12:14.810  INFO 212 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-10-30 17:12:14.923  INFO 212 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-30 17:12:15.491  INFO 212 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-30 17:12:15.501  INFO 212 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-30 17:12:15.744  WARN 212 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-30 17:12:15.951  INFO 212 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-30 17:12:16.249  INFO 212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8189 (http) with context path '/restapp'
+2019-10-30 17:12:16.251  INFO 212 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Started GbRestDemoApplication in 5.454 seconds (JVM running for 6.753)
+2019-10-30 17:13:04.652  INFO 212 --- [http-nio-8189-exec-2] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-30 17:20:02.502  INFO 12124 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Starting GbRestDemoApplication on OLGA-HOME with PID 12124 (C:\GeekBrains\repo\IdeaProjects\spring-new\rest\target\classes started by olga in C:\GeekBrains\repo\IdeaProjects\spring-new)
+2019-10-30 17:20:02.502 DEBUG 12124 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Running with Spring Boot v2.2.0.RELEASE, Spring v5.2.0.RELEASE
+2019-10-30 17:20:02.507  INFO 12124 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : No active profile set, falling back to default profiles: default
+2019-10-30 17:20:03.508  INFO 12124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-30 17:20:03.603  INFO 12124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83ms. Found 1 repository interfaces.
+2019-10-30 17:20:04.332  INFO 12124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-30 17:20:04.770  INFO 12124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8189 (http)
+2019-10-30 17:20:04.780  INFO 12124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-30 17:20:04.780  INFO 12124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-30 17:20:04.920  INFO 12124 --- [main] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring embedded WebApplicationContext
+2019-10-30 17:20:05.035  INFO 12124 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.6 by Redgate
+2019-10-30 17:20:05.040  INFO 12124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-30 17:20:05.160  INFO 12124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-30 17:20:05.165  INFO 12124 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/rest_db (MySQL 8.0)
+2019-10-30 17:20:05.224  INFO 12124 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.018s)
+2019-10-30 17:20:05.234  INFO 12124 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `rest_db`: 1
+2019-10-30 17:20:05.239  INFO 12124 --- [main] o.f.core.internal.command.DbMigrate      : Schema `rest_db` is up to date. No migration necessary.
+2019-10-30 17:20:05.354  INFO 12124 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-10-30 17:20:05.524  INFO 12124 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-10-30 17:20:05.639  INFO 12124 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-10-30 17:20:05.729  INFO 12124 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-30 17:20:06.234  INFO 12124 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-30 17:20:06.239  INFO 12124 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-30 17:20:06.474  WARN 12124 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-30 17:20:06.669  INFO 12124 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-30 17:20:06.959  INFO 12124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8189 (http) with context path '/restapp'
+2019-10-30 17:20:06.959  INFO 12124 --- [main] c.g.gbrestdemo.GbRestDemoApplication     : Started GbRestDemoApplication in 5.091 seconds (JVM running for 6.241)
+2019-10-30 17:20:38.563  INFO 12124 --- [http-nio-8189-exec-1] o.a.c.c.C.[.[localhost].[/restapp]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
