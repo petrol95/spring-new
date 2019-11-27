@@ -21,6 +21,7 @@
         <option value="$PROJECT_DIR$/spring-boot/pom.xml" />
         <option value="$PROJECT_DIR$/jsonex/pom.xml" />
         <option value="$PROJECT_DIR$/rest/pom.xml" />
+        <option value="$PROJECT_DIR$/scraping/pom.xml" />
       </list>
     </option>
   </component>

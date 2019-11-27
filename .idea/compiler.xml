@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="studentcourses-tl" />
         <module name="hibernate" />
+        <module name="scraping" />
         <module name="mvc" />
         <module name="jsonex" />
         <module name="injections" />
@@ -25,6 +26,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="rest" options="-parameters" />
+      <module name="scraping" options="-parameters" />
       <module name="spring-boot" options="-parameters" />
     </option>
   </component>
