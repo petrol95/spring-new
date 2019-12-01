@@ -1,55 +1,19 @@
 package com.scraping.demo;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.DomNode;
-import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
-import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
 import java.io.IOException;
-import java.math.BigDecimal;
-import java.net.MalformedURLException;
-import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.List;
 
 public class WebScraper {
 
-    public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, IOException {
+    public static void main(String[] args) throws FailingHttpStatusCodeException, IOException {
 
-        final WebClient webClient = new WebClient();
-        final HtmlPage startPage = webClient.getPage("http://en.wikipedia.org/wiki/Screen_Award_for_Best_Film");
-
-        String source = "/html/body/div[3]/div[3]/div[4]/div/table[2]/tbody/tr[:?:]/td[2]/i/a/@href";
-
-        String[] sourceArr = source.split(":");
-
-        String title = "/html/body/div[3]/div[3]/div[4]/div/table[2]/tbody/tr[:?:]/td[2]/i/a/@title";
-        String[] titleArr = title.split(":");
-
-        String titleData = titleArr[0] + 2 + titleArr[2];
-        String sourceData = sourceArr[0] + 2 + sourceArr[2];
-
-        List<DomNode> titleNodes = startPage.getByXPath(titleData);
-        List<DomNode> sourceNodes = startPage.getByXPath(sourceData);
-        System.out.println(titleNodes);
-        System.out.println(sourceNodes);
-
-        System.out.println("Hum Aapke Hain Kaun: " + titleNodes.get(0).getNodeValue());
-        System.out.println("/wiki/Hum_Aapke_Hain_Kaun: " + sourceNodes.get(0).getNodeValue());
-
-        titleData = titleArr[0] + 3 + titleArr[2];
-        sourceData = sourceArr[0] + 3 + sourceArr[2];
-        titleNodes = startPage.getByXPath(titleData);
-        System.out.println(titleNodes);
-
-        sourceNodes = startPage.getByXPath(sourceData);
-        System.out.println(sourceNodes);
-
-        System.out.println("Dilwale Dulhaniya Le Jayenge: " + titleNodes.get(0).getNodeValue());
-        System.out.println("/wiki/Dilwale_Dulhaniya_Le_Jayenge: " + sourceNodes.get(0).getNodeValue());
-
+        getIndianFilms();
 
 //        String searchQuery = "iphone 8s";
 //        String baseUrl = "https://newyork.craigslist.org/";
@@ -91,5 +55,31 @@ public class WebScraper {
 //            e.printStackTrace();
 //        }
 
+    }
+
+    private static void getIndianFilms() throws IOException {
+        final WebClient webClient = new WebClient();
+        final HtmlPage startPage = webClient.getPage("http://en.wikipedia.org/wiki/Screen_Award_for_Best_Film");
+        final int number = 10;
+
+        // XPath:/html/body/div[3]/div[3]/div[4]/div/table[2]/tbody/tr[2]/td[2]/i/a
+        String source = "/html/body/div[3]/div[3]/div[4]/div/table[2]/tbody/tr[:?:]/td[2]/i/a/@href";
+        String[] sourceArr = source.split(":");
+        String title = "/html/body/div[3]/div[3]/div[4]/div/table[2]/tbody/tr[:?:]/td[2]/i/a/@title";
+        String[] titleArr = title.split(":");
+
+        List<DomNode> titleNodes = new ArrayList<>();
+        List<DomNode> sourceNodes= new ArrayList<>();
+
+        for (int i = 2; i <= number + 1; i++) {
+            String titleData = titleArr[0] + i + titleArr[2];
+            String sourceData = sourceArr[0] + i + sourceArr[2];
+            titleNodes.addAll(startPage.getByXPath(titleData));
+            sourceNodes.addAll(startPage.getByXPath(sourceData));
+        }
+
+        for (int i = 0; i < number; i++) {
+            System.out.println(titleNodes.get(i).getNodeValue() + ": " + sourceNodes.get(i).getNodeValue());
+        }
     }
 }
