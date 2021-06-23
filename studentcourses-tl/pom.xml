@@ -18,7 +18,7 @@
 
         <spring.version>5.0.8.RELEASE</spring.version>
         <spring.security.version>5.0.7.RELEASE</spring.security.version>
-        <jetty.version>9.3.0.M1</jetty.version>
+        <jetty.version>9.4.41.v20210516</jetty.version>
         <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
     </properties>
 
